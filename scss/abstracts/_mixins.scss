@@ -29,11 +29,17 @@
    }
 }
 
-@mixin hoverEffect() {
+@mixin hoverEffect($h: true) {
    cursor: pointer;
 
-   &:hover {
-      @content;
+   @if ($h) {
+      &:hover,
+      &:focus {
+         @content;
+      }
+   } @else {
+      &:focus {
+         @content;
+      }
    }
 }
-

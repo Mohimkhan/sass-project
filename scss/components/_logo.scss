@@ -1,0 +1,8 @@
+@use '../abstracts/mixins' as *;
+
+.logo {
+   @include hoverEffect($h: false) {
+      outline: 0.3rem solid var(--clr-primary-soft-orange);
+      outline-offset: 0.5rem;
+   }
+}

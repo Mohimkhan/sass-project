@@ -70,7 +70,7 @@ img {
   font-weight: 400;
   cursor: pointer;
 }
-.mobile-nav ul a:hover {
+.mobile-nav ul a:hover, .mobile-nav ul a:focus {
   color: var(--clr-primary-soft-red);
 }
 
@@ -102,8 +102,16 @@ img {
   font-weight: 400;
   cursor: pointer;
 }
-.desktop-nav ul li a:hover {
+.desktop-nav ul li a:hover, .desktop-nav ul li a:focus {
   color: var(--clr-primary-soft-red);
+}
+
+.logo {
+  cursor: pointer;
+}
+.logo:focus {
+  outline: 0.3rem solid var(--clr-primary-soft-orange);
+  outline-offset: 0.5rem;
 }
 
 .menu {
@@ -196,7 +204,7 @@ header {
   letter-spacing: 0.5rem;
   cursor: pointer;
 }
-.news__info button:hover {
+.news__info button:hover, .news__info button:focus {
   background-color: var(--clr-neutral-Very-dark-blue);
 }
 .news_articles {
@@ -228,7 +236,7 @@ header {
   font-size: 2.4rem;
   cursor: pointer;
 }
-.news_articles .heading:hover {
+.news_articles .heading:hover, .news_articles .heading:focus {
   color: var(--clr-primary-soft-orange);
 }
 .news_articles .sub-heading {
@@ -278,7 +286,7 @@ header {
   font-weight: 800;
   cursor: pointer;
 }
-.news_technology > div h3:hover {
+.news_technology > div h3:hover, .news_technology > div h3:focus {
   color: var(--clr-primary-soft-red);
 }
 .news_technology > div p {
