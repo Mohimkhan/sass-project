@@ -1,0 +1,37 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/variables' as *;
+
+:root {
+   @each $names, $values in $colors {
+      @each $name, $value in $values {
+         --clr-#{$names}-#{$name}: #{$value};
+      }
+   }
+}
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   line-height: 1.5;
+   border: none;
+   outline: none;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-size: $base-fontSize;
+   // font-family: $base-family; (didn't like the font so avoid it)
+}
+
+img {
+   display: block;
+   max-width: 100%;
+   object-fit: cover;
+   aspect-ratio: 1/1;
+}

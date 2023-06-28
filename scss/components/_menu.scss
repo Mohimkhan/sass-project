@@ -1,0 +1,8 @@
+@use '../abstracts/mixins' as *;
+
+.menu {
+   display: none;
+   @include media() {
+      display: block;
+   }
+}

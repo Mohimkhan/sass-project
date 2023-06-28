@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use '../base/typography';
+@use './breakpoints' as *;
+
+@mixin flexBox(
+   $align: center,
+   $justify: center,
+   $wrap: nowrap,
+   $gap: normal,
+   $dir: row
+) {
+   display: flex;
+   justify-content: $justify;
+   align-items: $align;
+   flex-wrap: $wrap;
+   gap: $gap;
+   flex-direction: $dir;
+}
+
+@mixin fontWeight($weight) {
+   font-weight: map-get(typography.$font-weights, $weight);
+}
+
+@mixin media($width: max-width, $size: 'small') {
+   @media only screen and ($width: map-get($breakpoints, $size)) {
+      & {
+         @content;
+      }
+   }
+}
+
+@mixin hoverEffect() {
+   cursor: pointer;
+
+   &:hover {
+      @content;
+   }
+}
+
