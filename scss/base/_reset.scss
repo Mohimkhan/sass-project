@@ -26,12 +26,14 @@ html {
 
 body {
    font-size: $base-fontSize;
-   // font-family: $base-family; (didn't like the font so avoid it)
+   font-family: $base-family; // (didn't like the font so avoid it)
+   overflow-x: hidden;
+   min-height: 100vh;
 }
 
 img {
    display: block;
    max-width: 100%;
    object-fit: cover;
-   aspect-ratio: 1/1;
+   aspect-ratio: 1 / 1;
 }

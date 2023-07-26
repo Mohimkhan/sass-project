@@ -5,40 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
   <!-- google fonts (didn't like the font so i avoid it) -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
-    rel="stylesheet"> -->
+    rel="stylesheet">
+  <!-- external css link -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <title>Frontend Mentor | News homepage</title>
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
 
-  <!-- external css files -->
-  <link rel="stylesheet" href="./css/style.css">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
+  <style>
     .attribution {
-      font-size: 11px;
+      font-size: 15px;
       text-align: center;
     }
 
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
-  </style> -->
+  </style>
 </head>
 
 <body>
   <header>
-    <div class="logo" tabindex="1"><img src="./assets/images/logo.svg" alt="logo"></div>
+    <div class="logo" tabindex="1"><img src="./assets/logo.svg" alt="logo"></div>
     <!-- hamburger menu -->
     <div class="menu" tabindex="0">
-      <img src="./assets/images/icon-menu.svg" alt="hamburger menu">
+      <img src="./assets/icon-menu.svg " alt="hamburger menu">
     </div>
     <nav class="mobile-nav close" tabindex="2">
       <ul>
@@ -63,8 +62,8 @@
   <main class="news">
     <div class="news_web">
       <picture>
-        <source media="(min-width:375px)" srcset="./assets/images/image-web-3-desktop.jpg">
-        <img src="./assets/images/image-web-3-mobile.jpg" alt="web-3">
+        <source media="(min-width:375px)" srcset="./assets/image-web-3-desktop.jpg">
+        <img src="./assets/image-web-3-mobile.jpg" alt="web-3">
       </picture>
       <div class="news__details">
         <h1 class="headline">The Bright Future of Web 3.0?</h1>
@@ -96,24 +95,24 @@
       </article>
     </aside>
     <div class="news_technology">
-      <div class="news__pc">
-        <img src="./assets/images/image-retro-pcs.jpg" alt="retro-pcs">
+      <div class="news__pc" data-direction="left" data-aos="slide-left" data-aos-delay="400">
+        <img src="./assets/image-retro-pcs.jpg" alt="retro-pcs">
         <div class="news_more_info">
           <span>01</span>
           <h3> Reviving Retro PCs</h3>
           <p> What happens when old PCs are given modern upgrades?</p>
         </div>
       </div>
-      <div class="news__laptops">
-        <img src="./assets/images/image-top-laptops.jpg" alt="retro-pcs">
+      <div class="news__laptops" data-direction="bottom" data-aos="slide-bottom" data-aos-delay="400">
+        <img src="./assets/image-top-laptops.jpg" alt="retro-pcs">
         <div class="news_more_info">
           <span>02</span>
           <h3> Top 10 Laptops of 2022</h3>
           <p> Our best picks for various needs and budgets.</p>
         </div>
       </div>
-      <div class="news__gaming">
-        <img src="./assets/images/image-gaming-growth.jpg" alt="retro-pcs">
+      <div class="news__gaming" data-direction="right" data-aos="slide-right" data-aos-delay="400">
+        <img src="./assets/image-gaming-growth.jpg" alt="retro-pcs">
         <div class="news_more_info">
           <span>03</span>
           <h3> The Growth of Gaming</h3>
@@ -122,49 +121,12 @@
       </div>
     </div>
   </main>
-  <!-- Home
-  New
-  Popular
-  Trending
-  Categories -->
-
-  <!-- The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
-  people.
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-  <!-- scripts -->
-  <script src="./js/app.js" defer></script>
+    Coded by <a href="https://www.facebook.com/mohim.khan.5076798/" target="_blank">Mohim Khan</a>.
+  </div>
+  <!-- script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </body>
 
 </html>

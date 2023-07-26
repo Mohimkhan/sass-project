@@ -27,6 +27,11 @@ another command to watch your projects scss files
 ```
 yarn watch or npm run watch
 ```
+to build this project run this command
+
+```
+yarn build or npm run build
+```
 
 ## Live project link
 
