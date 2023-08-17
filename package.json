@@ -6,7 +6,6 @@
    "scripts": {
       "start": "webpack serve",
       "build": "webpack",
-      "serve": "yarn build && vite preview",
       "watch": "sass --watch scss/app.scss css/style.css "
    },
    "keywords": [],
